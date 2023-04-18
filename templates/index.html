@@ -23,125 +23,162 @@
         .fade-in.in-view {
             opacity: 1;
         }
-
-        #carouselmovie, #food{
+       /*美食饗宴區*/
+        #foodtitle{
+            position: relative; /*相對位置，跟上個區塊對應*/
+            top: 20px;
+          
+        }
+        .foodimage{
+            padding: 0px;
+        }
+        .foodblock1, .foodblock2{
+            padding: 20px 20px 20px 0px;
+            margin: -30px;
+        }
+        .food1, .food2, .food3, .food4{
+            padding: 0px 20px 0px 00px;
+        }
+        .food1, .food3{
+            padding-bottom: 20px;
+        }
+        .imagesize{
+            max-width: 100%;
+            height: auto;
+        }
+        /*電影設定區*/
+        #carouselmovie {
+            position: relative; /*相對位置，跟上個區塊對應*/
+            top: 20px;
             padding-top: 20px;
         }
-
         .movietext {
             padding-bottom: 20px;
+        }
+        .movie-title{
+            text-align: center;
+            font-weight: bold;
+            color: #333;
+
+        }
+        .release-date{
+            text-align: center;
+            font-weight: bold;
+            color: #e6003c;
         }
     </style>
 </head>
 
 <body>
     <!-- 導覽列 -->
-    <nav class="navbar bg-dark" data-bs-theme="dark">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">百貨公司</a>
-                <!-- 版面縮小時會變成導覽列 -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="#">關於我們</a>
-                        <a class="nav-link" href="#">櫃位資訊</a>
-                        <a class="nav-link" href="#">最新消息</a>
-                        <a class="nav-link disabled">顧客服務</a>
+    <section>
+        <nav class="navbar bg-dark" data-bs-theme="dark">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">百貨公司</a>
+                    <!-- 版面縮小時會變成導覽列 -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-link active" aria-current="page" href="#">關於我們</a>
+                            <a class="nav-link" href="#">櫃位資訊</a>
+                            <a class="nav-link" href="#">最新消息</a>
+                            <a class="nav-link disabled">顧客服務</a>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </nav>
         </nav>
-    </nav>
-
+    </section>
     <!-- 自動輪播 -->
-    <div id="carouselimage" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselimage" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselimage" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselimage" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carouselimage" data-bs-slide-to="3"
-                aria-label="Slide 4"></button>
+    <section>
+        <div id="carouselimage" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselimage" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselimage" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselimage" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselimage" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/static/products/77_1.jpg" class="d-block w-100 fade-in" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/static/products/77_2.jpg" class="d-block w-100 fade-in" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/static/products/77_3.jpg" class="d-block w-100 fade-in" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/static/products/77_4.jpg" class="d-block w-100 fade-in" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselimage" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">上一頁</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselimage" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">下一頁</span>
+            </button>
         </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="/static/products/77_1.jpg" class="d-block w-100 fade-in" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="/static/products/77_2.jpg" class="d-block w-100 fade-in" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="/static/products/77_3.jpg" class="d-block w-100 fade-in" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="/static/products/77_4.jpg" class="d-block w-100 fade-in" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselimage"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">上一頁</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselimage"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">下一頁</span>
-        </button>
-    </div>
+    </section>    
     <!-- 美食饗宴 -->
-    <div class="carousel fade-in" id="food">
-        <div>
-            <h2 class="text-danger fw-bold">FOOD FEAST</h2>
-            <h5 class="movietext">美食饗宴</h5>
+    <section>
+        <div class="carousel fade-in" id="foodtitle">
+            <div>
+                <h2 class="text-danger fw-bold">FOOD FEAST</h2>
+                <h5 class="movietext">美食饗宴</h5>
+            </div>
+            <div class="foodimage">
+                <div class="row foodblock1">
+                    <div class="col-md-6 col-xs-12 col-sm-6 food1">
+                        <a href="https://www.talee.com.tw/guide/1-2/%E5%A4%A7%E7%AB%8BA%EF%B9%91B%E9%A4%A8-%E7%BE%8E%E9%A3%9F%E9%A4%90%E5%BB%B3#restaurant">
+                            <div>
+                                <img src="/static/foods/5_1M.jpg" class="imagesize">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-xs-12 col-sm-6 food2">
+                        <a href="https://www.talee.com.tw/customPage/36">
+                            <div>
+                                <img src="/static/foods/5_2M.jpg" class="imagesize">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row foodblock2">
+                    <div class="col-md-6 col-xs-12 col-sm-6 food3">
+                        <a href="https://www.talee.com.tw/guide/page/1-2/199/%E5%AE%A2%E7%BE%8E%E5%A4%9A%E5%92%96%E5%95%A1(10/28%E9%96%8B%E5%B9%95)">
+                            <div>
+                                <img src="/static/foods/5_3M.jpg" class="imagesize">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-xs-12 col-sm-6 food4">
+                        <a href="https://www.talee.com.tw/customPage/37">
+                            <div>
+                                <img src="/static/foods/5_4M.jpg" class="imagesize">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-6">
-                <a>
-                    <div>
-                        <img src="/static/foods/5_1M.jpg">
-                    </div>
-                </a>
-            </div>
-            <div class="col-xs-12 col-sm-6">
-                <a>
-                    <div>
-                        <img src="/static/foods/5_2M.jpg">
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-6">
-                <a>
-                    <div>
-                        <img src="/static/foods/5_3M.jpg">
-                    </div>
-                </a>
-            </div>
-            <div class="col-xs-12 col-sm-6">
-                <a>
-                    <div>
-                        <img src="/static/foods/5_4M.jpg">
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
+    </section>
     <!-- 電影資訊 -->
     <div id="carouselmovie" class="carousel slide fade-in" data-bs-ride="carousel">
         <h2 class="text-danger fw-bold">MOVIE</h2>
@@ -149,47 +186,45 @@
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselmovie" data-bs-slide-to="0" class="active"
                 aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselmovie" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselmovie" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselmovie" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselmovie" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-xs-12 col-sm-6">
                         <div class="card">
                             <img src="/static/movies/248_1.jpg" class="card-img-top">
                             <div class="card-body">
-                                <h5 class="card-title">Movie 1</h5>
-                                <p class="card-text">This is a description of Movie 1.</p>
+                                <h5 class="movie-title">絕地營救</h5>
+                                <p class="release-date">上映日2023-04-14</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-xs-12 col-sm-6">
                         <div class="card">
                             <img src="/static/movies/248_2.jpg" class="card-img-top">
                             <div class="card-body">
-                                <h5 class="card-title">Movie 2</h5>
-                                <p class="card-text">This is a description of Movie 2.</p>
+                                <h5 class="movie-title">鬼玩人：復活</h5>
+                                <p class="release-date">上映日2023-04-20</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-xs-12 col-sm-6">
                         <div class="card">
                             <img src="/static/movies/248_3.jpg" class="card-img-top">
                             <div class="card-body">
-                                <h5 class="card-title">Movie 3</h5>
-                                <p class="card-text">This is a description of Movie 3.</p>
+                                <h5 class="movie-title">厄林</h5>
+                                <p class="release-date">上映日2023-04-14</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-xs-12 col-sm-6">
                         <div class="card">
                             <img src="/static/movies/248_4.jpg" class="card-img-top">
                             <div class="card-body">
-                                <h5 class="card-title">Movie 3</h5>
-                                <p class="card-text">This is a description of Movie 3.</p>
+                                <h5 class="movie-title">聖母院大火：世紀浩劫</h5>
+                                <p class="release-date">上映日2023-04-14</p>
                             </div>
                         </div>
                     </div>
@@ -197,39 +232,39 @@
             </div>
             <div class="carousel-item">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-xs-12 col-sm-6">
                         <div class="card">
                             <img src="/static/movies/249_1.jpg" class="card-img-top">
                             <div class="card-body">
-                                <h5 class="card-title">Movie 1</h5>
-                                <p class="card-text">This is a description of Movie 1.</p>
+                                <h5 class="movie-title">龍與地下城：盜賊榮耀</h5>
+                                <p class="release-date">上映日2023-03-29</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-xs-12 col-sm-6">
                         <div class="card">
                             <img src="/static/movies/249_2.jpg" class="card-img-top">
                             <div class="card-body">
-                                <h5 class="card-title">Movie 2</h5>
-                                <p class="card-text">This is a description of Movie 2.</p>
+                                <h5 class="movie-title">捍衛任務4</h5>
+                                <p class="release-date">上映日2023-03-22</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-xs-12 col-sm-6">
                         <div class="card">
                             <img src="/static/movies/249_3.jpg" class="card-img-top">
                             <div class="card-body">
-                                <h5 class="card-title">Movie 3</h5>
-                                <p class="card-text">This is a description of Movie 3.</p>
+                                <h5 class="movie-title">鈴芽之旅</h5>
+                                <p class="release-date">上映日2023-03-02</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-xs-12 col-sm-6">
                         <div class="card">
                             <img src="/static/movies/249_4.jpg" class="card-img-top">
                             <div class="card-body">
-                                <h5 class="card-title">Movie 3</h5>
-                                <p class="card-text">This is a description of Movie 3.</p>
+                                <h5 class="movie-title">關於我和鬼變成家人的那件事</h5>
+                                <p class="release-date">上映日2023-02-10</p>
                             </div>
                         </div>
                     </div>
@@ -237,51 +272,49 @@
             </div>
             <div class="carousel-item">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-xs-12 col-sm-6">
                         <div class="card">
                             <img src="/static/movies/247_1.jpg" class="card-img-top">
                             <div class="card-body">
-                                <h5 class="card-title">Movie 1</h5>
-                                <p class="card-text">This is a description of Movie 1.</p>
+                                <h5 class="movie-title">超級瑪莉歐兄弟電影版</h5>
+                                <p class="release-date">上映日2023-04-05</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-xs-12 col-sm-6">
                         <div class="card">
                             <img src="/static/movies/247_2.jpg" class="card-img-top">
                             <div class="card-body">
-                                <h5 class="card-title">Movie 2</h5>
-                                <p class="card-text">This is a description of Movie 2.</p>
+                                <h5 class="movie-title">鏡之孤城</h5>
+                                <p class="release-date">上映日2023-03-31</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-xs-12 col-sm-6">
                         <div class="card">
                             <img src="/static/movies/247_3.jpg" class="card-img-top">
                             <div class="card-body">
-                                <h5 class="card-title">Movie 3</h5>
-                                <p class="card-text">This is a description of Movie 3.</p>
+                                <h5 class="movie-title">AIR</h5>
+                                <p class="release-date">上映日2023-04-05</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-xs-12 col-sm-6">
                         <div class="card">
                             <img src="/static/movies/247_4.jpg" class="card-img-top">
                             <div class="card-body">
-                                <h5 class="card-title">Movie 3</h5>
-                                <p class="card-text">This is a description of Movie 3.</p>
+                                <h5 class="movie-title">恐怖行星</h5>
+                                <p class="release-date">上映日2023-03-31</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselmovie"
-                data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselmovie" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">上一頁</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselmovie"
-                data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselmovie" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">下一頁</span>
             </button>
